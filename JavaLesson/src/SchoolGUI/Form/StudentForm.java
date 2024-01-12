@@ -41,7 +41,6 @@ public class StudentForm extends JFrame {
         txtName = new JTextField();
 
         JLabel lblGender= new JLabel("Gender");
-        //JComboBox<String> cboGender = new JComboBox<>(new String[]{"Male","Female"});
         rdoMale = new JRadioButton("Male");
         rdoFemale = new JRadioButton("Female");
         ButtonGroup buttonGroup = new ButtonGroup();
@@ -93,6 +92,7 @@ public class StudentForm extends JFrame {
         DefaultTableModel model = (DefaultTableModel) table.getModel();
         if (SelectedRow != -1){
             model.removeRow(SelectedRow);
+            SelectedRow = -1 ;
         }
     }
 
